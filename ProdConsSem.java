@@ -1,12 +1,16 @@
 public class ProdConsSem {
     protected static int buffer;
     public static void main(String[] args) {
-        Semaforo pieno = new Semaforo(20);
-        Semaforo vuoto = new Semaforo(20);
+        Semaforo pieno = new Semaforo(0);
+        Semaforo vuoto = new Semaforo(1);
         ProduciDato prod = new ProduciDato(pieno , vuoto);
-        ProduciDato cons = new ProduciDato(pieno , vuoto);
+        ProduciDatoRaddopiato prodRaddopiato = new ProduciDatoRaddopiato(pieno , vuoto);
+        ConsumaDato cons = new ConsumaDato(pieno , vuoto);
+        ConsumaDatoRaddopiato consRaddopiato = new ConsumaDatoRaddopiato(pieno, vuoto);
         prod.start();
         cons.start();
-        System.out.println("Lettore:dato letto");
+        prodRaddopiato.start();
+        consRaddopiato.start();
+        System.out.println("Main: termine avvio thred ");
     }
 }
