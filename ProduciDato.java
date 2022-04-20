@@ -8,7 +8,7 @@ public class ProduciDato extends Thread{
         vuoto= s2;
     }
 
-    public void run() {
+    public  void run() {
         for (int k = 0; k < tanti; k++) {
             vuoto.P();
             ProdConsSem.buffer = k;

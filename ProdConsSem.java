@@ -4,8 +4,8 @@ public class ProdConsSem {
         Semaforo pieno = new Semaforo(0);
         Semaforo vuoto = new Semaforo(1);
         ProduciDato prod = new ProduciDato(pieno , vuoto);
-        ProduciDatoRaddopiato prodRaddopiato = new ProduciDatoRaddopiato(pieno , vuoto);
-        ConsumaDato cons = new ConsumaDato(pieno , vuoto);
+        ProduciDatoRaddopiato prodRaddopiato = new ProduciDatoRaddopiato(pieno , vuoto, "Gioorgiaa");
+        ConsumaDato cons = new ConsumaDato(pieno , vuoto, "Barrrbaraaa");
         ConsumaDatoRaddopiato consRaddopiato = new ConsumaDatoRaddopiato(pieno, vuoto);
         prod.start();
         cons.start();

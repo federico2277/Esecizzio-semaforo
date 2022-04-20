@@ -6,7 +6,7 @@ class ConsumaDatoRaddopiato extends Thread{
     pieno = s1;
     vuoto = s2;
     }
-    public void run(){
+    public  void run(){
         while (true) {
             pieno.P();
             dato = ProdConsSem.buffer;
